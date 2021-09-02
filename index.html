@@ -1,0 +1,115 @@
+<!-- 
+
+ input boxes
+
+User Information
+User Name
+Password
+ 
+ Radio Buttons
+
+What drink do you want?
+Coke
+Diet Coke
+Sprite
+Water
+ 
+ Checkboxes
+
+Pizza Preference
+Plain
+Pepperone
+Chicken
+Sausage
+ 
+ Text area 
+
+Special Instructions
+Special Instructions:
+ 
+ Submit Button 
+
+Submit
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>User Information</legend>
+        <ul>
+            <li>
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username">
+            </li>
+            <li>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>What drink do you want?</legend>
+        <ul>
+            <li>
+                <input type="radio" id="Coke" name="soda">
+                <label for="Coke">Coke</label>
+            </li>
+            <li>
+                <input type="radio" id="Diet Coke" name="soda">
+                <label for="Diet Coke">Diet Coke</label>
+            </li>
+            <li>
+                <input type="radio" id="Sprite" name="soda">
+                <label for="Sprite">Sprite</label>
+            </li>
+            <li>
+                <input type="radio" id="Water" name="soda">
+                <label for="Water">Water</label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Pizza preference</legend>
+        <ul>
+            <li>
+                <input type="checkbox" id="Plain" name="Plain">
+                <label for="Plain">Plain</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Pepperoni" name="Pepperoni">
+                <label for="Pepperoni">Pepperoni</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Chicken" name="Chicken">
+                <label for="Chicken">Chicken</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Sausage" name="Sausage">
+                <label for="Sausage">Sausage</label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Special Instructions</legend>
+        <ul>
+            <li>
+                <label for="instructions">Special Instructions:</label><br>
+                <textarea id="instructions">Input Special Instructions here</textarea>
+            </li>
+        </ul>
+        <input type="button" id="submit" name="submit" value="Submit">
+
+    </fieldset>
+</body>
+
+</html>
