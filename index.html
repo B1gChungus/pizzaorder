@@ -1,38 +1,3 @@
-<!-- 
-
- input boxes
-
-User Information
-User Name
-Password
- 
- Radio Buttons
-
-What drink do you want?
-Coke
-Diet Coke
-Sprite
-Water
- 
- Checkboxes
-
-Pizza Preference
-Plain
-Pepperone
-Chicken
-Sausage
- 
- Text area 
-
-Special Instructions
-Special Instructions:
- 
- Submit Button 
-
-Submit
-
-
- -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,26 +5,138 @@ Submit
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizza Form</title>
+    <style>
+        fieldset {
+            background-color: rgb(51, 51, 51);
+            max-width: 500px;
+            padding: 16px;
+            border: 15px;
+            border-radius: 8px;
+            border-color: rgb(200, 200, 200);
+            margin: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        legend {
+            margin-bottom: 0px;
+            margin-left: 16px;
+            ;
+            color: rgb(255, 255, 255);
+            stroke: rgb(50, 50, 50);
+            stroke-width: 5px;
+        }
+
+        textarea {
+            background-color: rgb(73, 73, 73);
+            color: rgb(255, 255, 255);
+            border-radius: 8px;
+            border-color: rgb(73, 73, 73);
+        }
+
+        input[type=text],
+        select {
+            width: 25%;
+            /* padding: 12px 20px; */
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid rgb(73, 73, 73);
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgb(73, 73, 73);
+        }
+
+        input[type=password],
+        select {
+            width: 25%;
+            /* padding: 12px 20px; */
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid rgb(73, 73, 73);
+            background-color: rgb(73, 73, 73);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=button],
+        select {
+            width: 15%;
+            /* padding: 12px 20px; */
+            margin: 8px 0;
+            display: inline-block;
+            /* border: 1px solid #ccc; */
+            border-radius: 5px;
+            box-sizing: content-box;
+            color: rgb(255, 255, 255);
+            stroke-width: 5px;
+            stroke: rgb(31, 31, 31);
+            background-color: rgb(45, 45, 45);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-image: url("https://i.ytimg.com/vi/Al-oyOph2eI/hqdefault.jpg");
+            background-size: 30px;
+        }
+
+        input[type=radio],
+        select {
+            border-radius: 5px;
+            box-sizing: content-box;
+            color: rgb(255, 255, 255);
+            background-color: rgb(45, 45, 45);
+        }
+
+        label {
+            color: rgb(255, 255, 255);
+        }
+
+        ul {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+
+    <script>
+        function buttonpress() {
+            console.log("wha")
+
+        }
+    </script>
 </head>
 
-<body>
+<body style="background-color:rgb(31, 31, 31)">
     <fieldset>
         <legend>User Information</legend>
-        <ul>
+        <label for="username">User Name:</label>
+        <input type="text" id="username" name="username" placeholder="Your Username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Your password">
+
+        <!-- <ul>
             <li>
                 <label for="username">User Name:</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" placeholder="Your Username">
             </li>
             <li>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" placeholder="Your password">
             </li>
-        </ul>
+        </ul> -->
     </fieldset>
     <fieldset>
         <legend>What drink do you want?</legend>
-        <ul>
+
+        <input type="radio" id="Coke" name="soda">
+        <label for="Coke">Coke</label><br>
+
+        <input type="radio" id="Diet Coke" name="soda">
+        <label for="Diet Coke">Diet Coke</label><br>
+
+        <input type="radio" id="Sprite" name="soda">
+        <label for="Sprite">Sprite</label><br>
+
+        <input type="radio" id="Water" name="soda">
+        <label for="Water">Water</label><br>
+
+        <!-- <ul>
             <li>
                 <input type="radio" id="Coke" name="soda">
                 <label for="Coke">Coke</label>
@@ -76,11 +153,11 @@ Submit
                 <input type="radio" id="Water" name="soda">
                 <label for="Water">Water</label>
             </li>
-        </ul>
+        </ul> -->
     </fieldset>
     <fieldset>
         <legend>Pizza preference</legend>
-        <ul>
+        <!-- <ul>
             <li>
                 <input type="checkbox" id="Plain" name="Plain">
                 <label for="Plain">Plain</label>
@@ -97,17 +174,36 @@ Submit
                 <input type="checkbox" id="Sausage" name="Sausage">
                 <label for="Sausage">Sausage</label>
             </li>
-        </ul>
+        </ul> -->
+        <input type="checkbox" id="Plain" name="Plain">
+        <label for="Plain">Plain</label><br>
+
+        <input type="checkbox" id="Pepperoni" name="Pepperoni">
+        <label for="Pepperoni">Pepperoni</label><br>
+
+        <input type="checkbox" id="Chicken" name="Chicken">
+        <label for="Chicken">Chicken</label><br>
+
+        <input type="checkbox" id="Sausage" name="Sausage">
+        <label for="Sausage">Sausage</label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Who is he</legend>
+
+        <textarea id="who" placeholder="whos joe"></textarea><br><br>
+
     </fieldset>
     <fieldset>
         <legend>Special Instructions</legend>
-        <ul>
+
+        <textarea id="instructions" placeholder="Input Special Instructions here..."></textarea><br><br>
+        <!-- <ul>
             <li>
                 <label for="instructions">Special Instructions:</label><br>
-                <textarea id="instructions">Input Special Instructions here</textarea>
+                <textarea id="instructions" placeholder="Input Special Instructions here..."></textarea>
             </li>
-        </ul>
-        <input type="button" id="submit" name="submit" value="Submit">
+        </ul> -->
+        <input type="button" id="submit" name="submit" value="Submit" onclick="buttonpress()">
 
     </fieldset>
 </body>
